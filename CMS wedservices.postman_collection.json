@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "6dbb9a31-d65d-4cc9-abe2-e5fec40816ec",
+		"name": "CMS wedservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21698234"
+	},
+	"item": [
+		{
+			"name": "generate token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\" : \"SimpleEnergyDev\",\r\n\"password\": \"Pulsar-123#\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app.sensorsatwork.com/SAW/api/token/generate-token",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sensorsatwork",
+						"com"
+					],
+					"path": [
+						"SAW",
+						"api",
+						"token",
+						"generate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "revenue",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.sensorsatwork.com/SAW/api/dashboard/revenue?startdate=20-Jul-2022&enddate=16-Aug-2022",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sensorsatwork",
+						"com"
+					],
+					"path": [
+						"SAW",
+						"api",
+						"dashboard",
+						"revenue"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "20-Jul-2022"
+						},
+						{
+							"key": "enddate",
+							"value": "16-Aug-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "power consumption",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://app.sensorsatwork.com/SAW/api/dashboard/powerconsumption?startdate=20-Jul-2022&enddate=16-Aug-2022",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sensorsatwork",
+						"com"
+					],
+					"path": [
+						"SAW",
+						"api",
+						"dashboard",
+						"powerconsumption"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "20-Jul-2022"
+						},
+						{
+							"key": "enddate",
+							"value": "16-Aug-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getlivecp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app.sensorsatwork.com/SAW/api/dashboard/getlivecp?stationId=0&chargerId=0&port=0",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sensorsatwork",
+						"com"
+					],
+					"path": [
+						"SAW",
+						"api",
+						"dashboard",
+						"getlivecp"
+					],
+					"query": [
+						{
+							"key": "stationId",
+							"value": "0"
+						},
+						{
+							"key": "chargerId",
+							"value": "0"
+						},
+						{
+							"key": "port",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gettopload",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app.sensorsatwork.com/SAW/api/dashboard/gettopload?startdate=12-aug-2022&enddate=16-Aug-2022",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sensorsatwork",
+						"com"
+					],
+					"path": [
+						"SAW",
+						"api",
+						"dashboard",
+						"gettopload"
+					],
+					"query": [
+						{
+							"key": "startdate",
+							"value": "12-aug-2022"
+						},
+						{
+							"key": "enddate",
+							"value": "16-Aug-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getlivetransaction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "startdate",
+							"value": "04-nov-2020",
+							"type": "default"
+						},
+						{
+							"key": "enddate",
+							"value": "21-jan-2021",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://app.sensorsatwork.com/SAW/api/dashboard/getlivetransaction?stationId=0&chargerId=0&port=0",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sensorsatwork",
+						"com"
+					],
+					"path": [
+						"SAW",
+						"api",
+						"dashboard",
+						"getlivetransaction"
+					],
+					"query": [
+						{
+							"key": "stationId",
+							"value": "0"
+						},
+						{
+							"key": "chargerId",
+							"value": "0"
+						},
+						{
+							"key": "port",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getlivetransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app.sensorsatwork.com/SAW/api/dashboard/getlivetransaction?stationId=0&chargerId=0&port=0&stationname=H98",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sensorsatwork",
+						"com"
+					],
+					"path": [
+						"SAW",
+						"api",
+						"dashboard",
+						"getlivetransaction"
+					],
+					"query": [
+						{
+							"key": "stationId",
+							"value": "0"
+						},
+						{
+							"key": "chargerId",
+							"value": "0"
+						},
+						{
+							"key": "port",
+							"value": "0"
+						},
+						{
+							"key": "stationname",
+							"value": "H98"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getutilization",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getlatestload",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getalarm",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stationlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}
